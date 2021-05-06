@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo js</title>
+</head>
+<body>
+    <h1>demo javasript</h1>
+    <form method="POST" name="form" >
+        <label>Prenom</label>
+        <input type="text" name="firstName" id="firstName"/> 
+    
+            <label>Nom</label>
+        <input type="text" name="lastName" id="lastName"/> 
+  
+            <label>Ville</label>
+        <input type="text" name="city" id="city"/>
+    </form>
+    <button type="submit" onsubmit="test()" id="two">envoyer</button>
+
+
+    <h2>correction</h2>
+    <form method="POST" name="form" >
+        <label>Prenom1</label>
+        <input type="text" name="firstName" id="firstName1"/> 
+    
+            <label>Nom1</label>
+        <input type="text" name="lastName" id="lastName1"/> 
+  
+            <label>Ville1</label>
+        <input type="text" name="city" id="city1"/>
+    </form>
+    <button type="submit" id="test2">envoyer</button>
+    
+    <script>
+
+    // 1ere version, trouvé sur le web, pas optimisé
+function test() {
+
+            let firstNameValue = document.getElementById('firstName').value;
+            let lastNameValue = document.getElementById('lastName').value;
+            let cityNameValue = document.getElementById('city').value;
+            alert('Nom : ' + firstNameValue +'\nPrenom : ' + lastNameValue +'\nVille : '+ cityNameValue );  
+          
+        }
+
+
+
+// le let submit n'est pas obligatoire, mais utile si on souhaite l'utiliser après
+
+let submit = document.getElementById('test2').addEventListener("click", function identity ()
+{
+            let firstNameValue = document.getElementById('firstName1').value;
+            let lastNameValue = document.getElementById('lastName1').value;
+            let cityNameValue = document.getElementById('city1').value;
+            alert('Nom : ' + firstNameValue +'\nPrenom : ' + lastNameValue +'\nVille : '+ cityNameValue );  
+}   
+);
+
+        
+        
+    </script>
+</body>
+</html>

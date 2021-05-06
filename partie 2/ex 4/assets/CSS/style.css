@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Darleston";
+    src: url('../police/Madina.otf');
+}
+
+
+body {
+    background-image: url('../images/Travel-Images.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/header.jpg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Dancing Script', cursive ;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    padding-top: 10%;
+
+}
+
+#nav {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    list-style: none;
+    height: 100%;
+    margin: 1%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0%;
+    align-items: center;
+    flex-basis: auto;
+    text-decoration: none;
+}
+
+
+ul li,
+ul a {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: rgb(100, 72, 50);
+    font-size: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    flex: 1 1 auto;
+}
+
+#search {
+    height: 25px;
+}
+
+#toolbar {
+    height: 20px;
+    background: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3) outset;
+    background: none;
+}
+
+/* /!\ attention, aucun espace entre .button et :hover sinon ne fonctionne pas!*/
+/* attachement initial sert a faire apparaitre l'unique image mise une fois sur chaque blocs (boutons) sinon elle n'apparait qu'une fois sur le conteneur (navbar)   */
+.button:hover {
+    color: rgb(0, 0, 0);
+    background-image: url('../images/feuilles-de-palmier-en-bois-10-pieces.png');
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: center;
+    background-attachment: inherit;
+    background-origin: border-box;
+    background-blend-mode: color;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+
+/* permet de retirer un element avec son emplacement. plus efficace que hidden qui ne cache pas la zone vide */
+#icon {
+    display: none;
+}
+
+section {
+    width: 85%;
+    text-align: center;
+    vertical-align: center;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+
+#home {
+    font-size: xx-large;
+    padding: 10%;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-inline: 2px solid hsl(202, 100%, 33%);
+    border-radius: 10px;
+}
+
+p {
+    word-wrap: break-word;
+    font-size:1.5em;
+    overflow: auto;
+    max-height: 200px;
+}
+
+#folder {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-inline: 2px solid rgb(0, 105, 167);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.65);
+  
+}
+
+.bloc {
+
+    vertical-align: middle;
+    text-align: center;
+    width: 0%;
+    flex-basis: auto;
+    margin-top: 5%;
+    min-width: 250px;
+   
+}
+/* OPTION 1 pour javascript */
+/* 
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transition: all .8s ease-in; 
+    transform: translateX(0%) scale(0.95);
+} */
+
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #0069a7;
+}
+
+@media screen and (max-width:1024px) {
+    .button {
+        border-inline: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+
+    #icon {
+        display: block;
+        width: 98%;
+        text-align: center;
+    }
+    .fa-bar {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 79%;
+        margin-left: 9%;
+        text-align: center;
+        justify-content: center;
+background-color: rgba(255, 255, 255, 0.65);
+border-radius: 10px;
+    }  
+
+    .button,
+    .button2 {
+        display: none;
+    }
+
+    #nav {
+        background-color: transparent;
+    }
+
+    #nav:hover a {
+        display: block;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        background-image: unset;
+        border-bottom: 1px solid rgba(0, 106, 167, 0.651);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+   
+    }
+
+
+    #nav:hover {
+        width: 80%;
+        display: block;
+        border-radius: 10px;
+        margin-bottom: 10%;
+        background-color: rgba(255, 255, 255, 0.65);
+        text-align: center;
+        margin-left: 10%;
+    }
+    #nav:hover .button2{
+        display: block;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        background-image: unset;
+        text-align: center;
+
+    }
+
+    li:hover {
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        background-image: url('../images/feuilles-de-palmier-en-bois-10-pieces.png');
+        background-size: contain;
+        background-position: center;
+        background-attachment: initial;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    #icon:hover  {
+        background-image: none;
+        background-color: transparent;
+    }
+    nav:hover .fa-bar{
+        background-image: none;
+        background-color: transparent;
+    }
+
+}
